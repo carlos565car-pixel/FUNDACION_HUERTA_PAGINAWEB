@@ -269,3 +269,51 @@ body {
     border-top: 1px solid #e0e0e0;
     border-radius: 0 0 12px 12px;
 }
+/* ------------------------------------- */
+/* 2. RESPONSIVIDAD GENERAL */
+/* ------------------------------------- */
+
+/* 1. Resetear el tamaño de imágenes para que no desborden */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Regla para la barra de navegación en móviles */
+@media (max-width: 767px) {
+    
+    /* Configura la navegación para que los enlaces se apilen verticalmente */
+    .main-nav {
+        display: flex;
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Ajusta el espaciado de los enlaces en celular */
+    .main-nav a {
+        padding: 10px 5px;
+        margin: 5px 0;
+        border-bottom: 1px solid #eee; 
+    }
+    
+    /* Quita el padding del contenedor principal para usar todo el ancho */
+    .content-section {
+        padding: 20px 10px; 
+    }
+    
+    /* Regla para todas las galerías (como la de comunidades) */
+    .mission-gallery {
+        flex-direction: column; /* Apila las imágenes verticalmente */
+        gap: 10px !important; /* Asegura un buen espacio entre elementos apilados */
+    }
+
+    .mission-gallery img {
+        width: 100% !important; 
+        margin-bottom: 0;
+    }
+
+    .form-group {
+        width: 100% !important;
+    }
+}
